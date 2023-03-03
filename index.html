@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+      <h1>Cats list</h1>
+      <div class="btn_add">
+        <button class = "btn_add_cat">Add cat</button>
+      </div>
+      
+      <div class="modal_window hidden">
+        <div class="custom_modal">
+            <section class="form" id="form">
+                <div class="form__container">
+                    <h1>Введите информацию о коте</h1>
+                    <form name="add_cats_form">
+                        <div class="form__group">
+                            <input name= "id" type="number" id="id" placeholder="Введите id кота">
+                            <input name= "name" type="text" id="name" placeholder="Введите имя кота">
+                            <input name="image" type="text" id="image" placeholder="Введите url изображения">
+                            <input name= "age" type="number" id="age" placeholder="Введите возраст кота">
+                            <input name= "rate" type="number" id="rate" placeholder="Введите рейтинг кота">
+                            <select name= "favorite" id="favorite">
+                                <option>Любимый?</option>
+                                <option value="true">Да</option>
+                                <option value="false">Нет</option>
+                           </select>
+                           <textarea name= "description" type="text" id="description" placeholder="Введите описание кота"></textarea>
+                        </div>
+                        <p class="err_msg"></p>
+                        <div class="form__buttons">
+                           <button type="submit" class="form__submit">Добавить</button>
+                           <button type="button" class="form__close">Закрыть</button>
+                        </div>
+                    </form>
+                </div>
+             </section>
+        </div>
+      </div>
+
+      <div class="modal_window2 hidden">
+         <div class="custom_modal2">
+            <div class="cat_description1">
+            </div>
+            <span><button class="modal2_close">Закрыть</button></span>
+         </div>
+      </div>
+
+    <div class="cards_box"></div>
+
+    <script src="api.js"></script>
+    <script src="index.js"></script> 
+</body>
+</html>
